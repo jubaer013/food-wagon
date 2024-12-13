@@ -1,0 +1,271 @@
+<style>
+    <style>
+      #shopify-section-{{ section.id }} {
+        max-width: 1924px;
+        max-height: 1300px;
+        align-content: center;
+        margin: auto;
+      }
+
+      #shopify-section-{{ section.id }} .discount-container {
+        width: 1476px;
+        height: 1274px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        margin: auto;
+      }
+
+      #shopify-section-{{ section.id }} .discount-card {
+        width: 357px;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #shopify-section-{{ section.id }} .image-section img {
+        width: 357px;
+        height: 301px;
+        object-fit: cover;
+        border-radius: 16px 16px 0 0;
+      }
+
+      #shopify-section-{{ section.id }} .badge-container {
+        width: 243px;
+        height: 42px;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        display: flex;
+        gap: 8px;
+        z-index: 2;
+      }
+
+      #shopify-section-{{ section.id }} .badge {
+        background: #F17228;
+        color: #FFFFFF;
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26.4px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      #shopify-section-{{ section.id }} .badge.fast {
+        background: #FFB30E;
+      }
+
+      #shopify-section-{{ section.id }} .info-section {
+    width: 195px;
+    height: auto;
+    gap: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  #shopify-section-{{ section.id }} .restaurant-name {
+    display: flex;
+    width: 270px;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    color: #424242;
+  }
+
+  #shopify-section-{{ section.id }} .restaurant-name img {
+    width: 64px;
+    height: 64px;
+    gap: 0px;
+    opacity: 0px;
+    border-radius: 4px;
+  }
+
+  #shopify-section-{{ section.id }} .star-rating {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFB30E;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  #shopify-section-{{ section.id }} .status {
+    background: #E6F4EA;
+    color: #28A745;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 16px;
+    margin-top: 8px;
+  }
+
+
+      /* Centering the heading */
+      #shopify-section-{{ section.id }} .featured-restaurants--heading {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        color: #333;
+      }
+
+
+      #shopify-section-{{ section.id }} .view-all-button {
+        display: block;
+        width: 200px;
+        text-align: center;
+        margin: 24px auto 0;
+        justify-content: space-around;
+        background: linear-gradient(97.86deg, #FFBA26 -8.95%, #FF9A0E 109.24%);
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        box-shadow: 0px 20px 40px 0px #FFAE004A;
+        box-shadow: 0px 5px 10px 0px #FFAE0042;
+      }
+
+      #shopify-section-{{ section.id }} .view-all-button:hover {
+        background: #d89a00;
+      }
+    </style>
+</style>
+
+<div class="discount">
+  <p class="featured-restaurants--heading">{{ section.settings['featured-restaurants-heading'] }}</p>
+
+  <!-- Discount Container -->
+  <div class="discount-container">
+    {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+    {% if text_with_images.size > 0 %}
+      {% for text_with_image in text_with_images %}
+        <div class="discount-card">
+          <!-- Image Section -->
+          <div class="image-section">
+            {% if text_with_image.settings['block-image'] != blank %}
+              <div class="badge-container">
+                {% if text_with_image.settings['discount-tag'] %}
+                  <div class="badge">
+                    {{ text_with_image.settings['discount-tag'] }}
+                  </div>
+                {% endif %}
+                {% if text_with_image.settings['delivery-type'] %}
+                  <div class="badge fast">
+                    {{ text_with_image.settings['delivery-type'] }}
+                  </div>
+                {% endif %}
+              </div>
+              <img
+                src="{{ text_with_image.settings.block-image | image_url: width: text_with_image.settings.block-image.width }}"
+                alt="{{ text_with_image.settings.block-image.alt }}"
+                height="{{ text_with_image.settings.block-image.height }}"
+                width="{{ text_with_image.settings.block-image.width }}"
+              >
+            {% endif %}
+          </div>
+
+          <!-- Info Section -->
+          <div class="info-section">
+            <div class="restaurant-name">
+              {% if text_with_image.settings['restaurant-logo'] != blank %}
+                <img
+                  src="{{ text_with_image.settings.restaurant-logo | image_url: width: 24 }}"
+                  alt="Restaurant Logo"
+                  height="{{ text_with_image.settings.restaurant-logo.height }}"
+                  width="{{ text_with_image.settings.restaurant-logo.width }}"
+                >
+              {% endif %}
+              {{ text_with_image.settings['image-text'] }}
+            </div>
+            <div class="star-rating">★ {{ text_with_image.settings['star-rating'] }}</div>
+            <div class="status">
+              {{ text_with_image.settings['discount-time'] }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <!-- "View All" Button -->
+  <a href="#" class="view-all-button">View All</a>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Restaurants",
+  "settings": [
+    {
+      "type": "text",
+      "id": "featured-restaurants-heading",
+      "label": "Heading here",
+      "default":"Featured Restaurants"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Restaurant Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-image",
+          "label": "Restaurant Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "restaurant-logo",
+          "label": "Restaurant Logo"
+        },
+        {
+          "type": "text",
+          "id": "image-text",
+          "label": "Restaurant Name"
+        },
+        {
+          "type": "text",
+          "id": "star-rating",
+          "label": "Star Rating"
+        },
+        {
+          "type": "text",
+          "id": "discount-tag",
+          "label": "Discount Tag"
+        },
+        {
+          "type": "text",
+          "id": "delivery-type",
+          "label": "Delivery Type"
+        },
+        {
+          "type": "text",
+          "id": "discount-time",
+          "label": "Restaurant Status"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "featured-restaurants",
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,179 @@
+<style>
+  #shopify-section-{{ section.id }} .best-deals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1480px;
+    width: 1480px;
+    height: 512px;
+    margin: 0 auto;
+    gap: 0;
+    border-radius: 16px;
+  }
+
+ #shopify-section-{{ section.id }} .best-deals .best-deals-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%; 
+  max-width: 961px;
+}
+
+#shopify-section-{{ section.id }} .best-deals .best-deals-right .best-deals-image img {
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+  #shopify-section-{{ section.id }} .best-deals .best-deals-left {
+    max-width: 519px;
+    flex: 1;
+    background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) -42.47%, rgba(253, 237, 202, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    flex: 1;
+    height: 100%;
+  }
+   #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals--font-section{
+     width: 407px;
+     height: 292px;
+     gap: 19px;
+     opacity: 0px;
+     margin-right: auto;
+     margin-left: auto;
+
+  }
+
+  #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals--font-section  .best-deals-heading {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52.8px;
+    text-align: left;
+    color: #000;
+  }
+  #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals--font-section  .best-deals-heading p strong{
+   color: #FFB800;
+
+  }
+
+  #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals--font-section .best-deals-text {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    color: #616161;
+  }
+    #shopify-section-{{ section.id }}  .best-deals .best-deals-left .best-deals-button {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+   #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals-button .best-deals-button-link {
+    display: inline-block;
+    width: 407px;
+    height: 60px;
+    padding: 10px 20px; 
+    border-radius: 8px;
+    background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+    #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals-button .best-deals-button-link:hover {
+        background-color: #e16524;
+        box-shadow: 0px 14px 32px 0px #FFB20E4A;
+
+        box-shadow: 0px 5px 8px 0px #DE97003D;
+
+    }
+
+    #shopify-section-{{ section.id }} .best-deals .best-deals-left .best-deals-button .best-deals-button-link a {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+</style>
+
+<div class="best-deals">
+  <div class="best-deals-left">
+    <div class="best-deals--font-section">
+    <div class="best-deals-heading">
+      <p>{{ section.settings.best-deals-heading }}</p>
+    </div>
+    <div class="best-deals-text">
+      <p>{{ section.settings.best-deals-text }}</p>
+    </div>
+    </div>
+    <div class= "best-deals-button">
+      <div class="best-deals-button-link">
+      <a href="#">{{ section.settings.button-text }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="best-deals-right">
+    {% if section.settings.best-deals-image != blank %}
+        <div class="hot-pizza-image">
+          <img
+            src="{{ section.settings.best-deals-image | image_url: width: section.settings.best-deals-image.width }}"
+            alt="{{ section.settings.best-deals-image.alt }}"
+            height="{{ section.settings.best-deals-image.height }}"
+            width="{{ section.settings.best-deals-image.width }}"
+          />
+        </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "best-deals",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "best-deals-heading",
+      "label": "Heading here"
+    },
+    {
+      "type": "textarea",
+      "id": "best-deals-text",
+      "label": "Your text here",
+      "default": "Enjoy the large size of sandwiches. Complete perfect slice of sandwiches."
+    },
+    {
+       "type": "text",
+       "id": "button-text",
+       "label": "Edit Button",
+       "default": "Proceed to Order >"
+    },
+    {
+        "type": "image_picker",
+        "id": "best-deals-image",
+        "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Best deals"
+    }
+  ]
+}
+{% endschema %}

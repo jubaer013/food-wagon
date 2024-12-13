@@ -1,0 +1,280 @@
+<style>
+          #shopify-section-{{ section.id }} .popular-items {
+          max-width: 1924px;
+          height: auto;
+          gap: 0px;
+          opacity: 0px;
+          padding: 50px 100px;
+          font-family: 'Source Sans 3', sans-serif;
+        }
+
+        #shopify-section-{{ section.id }} .popular-items--heading h4 {
+          font-family: 'Source Sans 3', sans-serif;
+          font-size: 43px;
+          font-weight: 700;
+          line-height: 48.16px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #212121;
+        }
+
+        #shopify-section-{{ section.id }} .food-card-container {
+        width: 1,520px;
+        height: 610px;
+        gap: 88px;
+        opacity: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        padding: 0 60px;
+    }
+
+    #shopify-section-{{ section.id }} .food-card-slider {
+        display: flex;
+        gap: 20px;
+        align-content: center;
+        margin: 0 auto;
+        max-width: calc(100% - 120px);
+    }
+
+
+        #shopify-section-{{ section.id }} .food-card {
+          width: 283.4px;
+          height: 393px;
+          gap: 16px;
+          opacity: 0px;
+          text-align: center;
+          flex-shrink: 0;
+        }
+
+        #shopify-section-{{ section.id }} .food-card img {
+          width: 283.4px;
+          height: 283px;
+          padding: 0px 0.61px 0px 0px;
+          gap: 0px;
+          border-radius: 16px;
+          opacity: 0px;
+          object-fit: cover;
+        }
+
+        #shopify-section-{{ section.id }} .food-card .food-name {
+          font-family: 'Source Sans 3', sans-serif;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 26.4px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #424242;
+          margin-top: 4px;
+
+        }
+
+        #shopify-section-{{ section.id }} .food-card .location {
+          font-family: 'Source Sans 3', sans-serif;
+          font-size: 22px;
+          line-height: 24px;
+          text-align: left;
+          color: #FFB30E;
+        }
+
+        #shopify-section-{{ section.id }} .food-card .price {
+          font-family: 'Source Sans 3', sans-serif;
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 24px;
+          text-align: left;
+          color: #212121;
+          margin-top: 3px;
+        }
+
+        #shopify-section-{{ section.id }} .order-button {
+          width: 283.4px;
+          height: 60px;
+          padding: 21px 48px 21px 48px;
+          gap: 10px;
+          border-radius: 8px;
+          background: #F17228;
+          box-shadow: 0px 20px 40px 0px #FA63233D;
+          box-shadow: 0px 5px 10px 0px #FD725C38;
+          outline: none;
+          border: none;
+          margin-top: 8px;
+        }
+        #shopify-section-{{ section.id }} .order-button p{
+          font-family: 'Source Sans 3', sans-serif;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 18px;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: #FFFFFF;
+          margin: auto;
+
+        }
+
+        #shopify-section-{{ section.id }} .order-button:hover {
+          background-color: #ff9500;
+        }
+
+        #shopify-section-{{ section.id }} .circle-button {
+          position: absolute;
+          background-color: #ffa800;
+          border: none;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          font-size: 24px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          z-index: 10;
+        }
+  #shopify-section-{{ section.id }} .circle-button.left-button {
+    width: 76px;
+    height: 76px;
+    padding: 10px 9px 10px 11px;
+    gap: 10px;
+    border-radius: 92px;
+    border: 1px;
+    opacity: 0px;
+    background: #FFB20E;
+    border: 1px solid #FAAA01;
+    box-shadow: 0px 14px 32px 0px #FFB20E4A;
+    box-shadow: 0px 5px 8px 0px #DE97003D;
+    left: 10px;
+  }
+    #shopify-section-{{ section.id }} .circle-button.left-button p{
+    font-size: 33px;
+    font-weight: 900;
+    line-height: 39.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+  }
+
+  #shopify-section-{{ section.id }} .circle-button.right-button {
+    width: 76px;
+    height: 76px;
+    padding: 10px 9px 10px 11px;
+    gap: 10px;
+    border-radius: 92px;
+    border: 1px;
+    opacity: 0px;
+    background: #FFB20E;
+    border: 1px solid #FAAA01;
+    box-shadow: 0px 14px 32px 0px #FFB20E4A;
+    box-shadow: 0px 5px 8px 0px #DE97003D;
+    right: 0px;
+  }
+  #shopify-section-{{ section.id }} .circle-button.right-button p{
+    font-size: 33px;
+    font-weight: 900;
+    line-height: 39.6px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF;
+  }
+
+  #shopify-section-{{ section.id }} .circle-button:hover {
+      background-color: #ff9500;
+  }
+</style>
+
+<div class="popular-items">
+  <div class="popular-items--heading">
+    <h4>{{ section.settings['popular-items_text'] }}</h4>
+  </div>
+
+  <!-- Food Cards Container -->
+  <div class="food-card-container">
+    <button class="circle-button left-button"><p>&#8249;</p></button>
+    <div class="food-card-slider">
+      {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+      {% if text_with_images.size > 0 %}
+        {% for text_with_image in text_with_images %}
+          <div class="food-card">
+            <!-- Image -->
+            {% if text_with_image.settings['popular-items_icon'] != blank %}
+              <img
+                src="{{ text_with_image.settings.popular-items_icon | image_url }}"
+                alt="{{ text_with_image.settings.popular-items_icon.alt }}"
+                height="{{ text_with_image.settings.block-image.height }}"
+                width="{{ text_with_image.settings.block-image.width }}"
+              >
+            {% endif %}
+
+            <p class="food-name">{{ text_with_image.settings['icon-text'] }}</p>
+            <p class="location">{{ text_with_image.settings.location }}</p>
+            <p class="price">${{ text_with_image.settings.price }}</p>
+            <button class="order-button">
+              <p>{{ text_with_image.settings['order-now'] }}</p>
+            </button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <button class="circle-button right-button"><p>&#8250;</p></button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "popular-item",
+  "settings": [
+    {
+      "type": "text",
+      "id": "popular-items_text",
+      "label": "Edit heading here",
+      "default": "Popular items"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Food Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "popular-items_icon",
+          "label": "Food Image"
+        },
+        {
+          "type": "text",
+          "id": "icon-text",
+          "label": "Food Name"
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "text",
+          "id": "order-now",
+          "label": "Button text here:",
+          "default":"Order now"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popular items"
+    }
+  ]
+}
+{% endschema %}

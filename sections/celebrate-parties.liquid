@@ -1,0 +1,179 @@
+<style>
+    #shopify-section-{{ section.id }} .celebrate-parties {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1480px;
+      width: 1480px;
+      height: 512px;
+      margin: 0 auto;
+      gap: 0;
+      border-radius: 16px;
+    }
+
+   #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    height: 100%;
+    max-width: 961px;
+  }
+
+  #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-left .celebrate-parties-image img {
+    border-radius: 16px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+    #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right {
+      max-width: 519px;
+      flex: 1;
+      background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) -42.47%, rgba(253, 237, 202, 0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 20px;
+      flex: 1;
+      height: 100%;
+    }
+    .celebrate-parties .celebrate-parties-right .celebrate-parties--font-section{
+       width: 407px;
+       height: 292px;
+       gap: 19px;
+       opacity: 0px;
+       margin-right: auto;
+       margin-left: auto;
+
+    }
+
+    #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right .celebrate-parties--font-section .celebrate-parties-heading {
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 52.8px;
+      text-align: left;
+      color: #000;
+    }
+    #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right .celebrate-parties--font-section .celebrate-parties-heading p strong{
+     color: #FFB800;
+
+    }
+
+    #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right .celebrate-parties--font-section .celebrate-parties-text {
+      margin-top: 20px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25.2px;
+      text-align: left;
+      color: #616161;
+    }
+      #shopify-section-{{ section.id }}  .celebrate-parties .celebrate-parties-right .celebrate-parties-button {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+      }
+
+     #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right .celebrate-parties-button .celebrate-parties-button-link {
+      display: inline-block;
+      width: 407px;
+      height: 60px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
+      text-align: center;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 18px;
+  }
+
+
+      #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right .celebrate-parties-button .celebrate-parties-button-link:hover {
+          background-color: #e16524;
+          box-shadow: 0px 14px 32px 0px #FFB20E4A;
+
+          box-shadow: 0px 5px 8px 0px #DE97003D;
+
+      }
+
+      #shopify-section-{{ section.id }} .celebrate-parties .celebrate-parties-right .celebrate-parties-button .celebrate-parties-button-link a {
+          font-family: Source Sans Pro;
+          font-size: 18px;
+          font-weight: 900;
+          line-height: 18px;
+          text-align: center;
+          text-decoration: none;
+          color: #FFFFFF;
+      }
+</style>
+
+<div class="celebrate-parties">
+  <div class="celebrate-parties-left">
+    {% if section.settings['celebrate-parties-image'] != blank %}
+      <div class="celebrate-parties-image">
+        <img
+          src="{{ section.settings.celebrate-parties-image | image_url: width: section.settings.celebrate-parties-image.width }}"
+          alt="{{ section.settings.celebrate-parties-image.alt }}"
+          height="{{ section.setting.scelebrate-parties-image.height }}"
+          width="{{ section.settings.celebrate-parties-image.width }}"
+        >
+      </div>
+    {% endif %}
+  </div>
+  <div class="celebrate-parties-right">
+    <div class="celebrate-parties--font-section">
+      <div class="celebrate-parties-heading">
+        <p>{{ section.settings['celebrate-parties-heading'] }}</p>
+      </div>
+      <div class="celebrate-parties-text">
+        <p>{{ section.settings['celebrate-parties-text'] }}</p>
+      </div>
+    </div>
+    <div class="celebrate-parties-button">
+      <div class="celebrate-parties-button-link">
+        <a href="#">{{ section.settings['button-text'] }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "celebrate-parties",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "celebrate-parties-heading",
+      "label": "Heading here"
+    },
+    {
+      "type": "textarea",
+      "id": "celebrate-parties-text",
+      "label": "Your text here",
+      "default": "Get the best fried chicken smeared with a lip-smacking lemon chili flavor. Check out best deals for fried chicken."
+    },
+    {
+       "type": "text",
+       "id": "button-text",
+       "label": "Edit Button",
+       "default": "Proceed to Order >"
+    },
+    {
+        "type": "image_picker",
+        "id": "celebrate-parties-image",
+        "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Celebrate Parties"
+    }
+  ]
+}
+{% endschema %}

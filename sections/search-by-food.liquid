@@ -1,0 +1,178 @@
+<style>
+  #shopify-section-{{ section.id }} .search-by-food {
+    max-width: 1924px;
+    padding: 82px 223px 55px 223px;
+    background: #FEFAF1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #shopify-section-{{ section.id }} .search-by-food_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1479px;
+  }
+
+  #shopify-section-{{ section.id }} .search-by-food--heading h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #212121;
+  }
+
+  #shopify-section-{{ section.id }} .view-all-container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  #shopify-section-{{ section.id }} .view-all-link {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFA800;
+    text-decoration: none;
+  }
+
+  #shopify-section-{{ section.id }} .circle-buttons {
+    display: flex;
+    gap: 5px;
+  }
+
+  #shopify-section-{{ section.id }} .circle-button {
+    width: 76px;
+    height: 76px;
+    background-color: #FFA800;
+    border: none;
+    border-radius: 50%;
+    font-size: 33px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 14px 32px 0px rgba(255, 178, 14, 0.29),
+      0px 5px 8px 0px rgba(222, 151, 0, 0.24);
+    transition: background-color 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .circle-button:hover {
+    background-color: #ff9500;
+  }
+
+  #shopify-section-{{ section.id }} .circle-button:active {
+    background-color: #ff8c00;
+  }
+
+  #shopify-section-{{ section.id }} .food-card--holder {
+    width: 100%;
+    max-width: 1479px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    margin-top: 30px;
+  }
+
+  #shopify-section-{{ section.id }} .food-card {
+    width: 218px;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .food-card img {
+    width: 218px;
+    height: 218px;
+    border-radius: 144px;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .food-card .icon-text p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #424242;
+  }
+</style>
+
+<div class="search-by-food">
+  <div class="search-by-food_container">
+    <!-- Left Side: Heading -->
+    <div class="search-by-food--heading">
+      <h4>{{ section.settings['search-by-food_text'] }}</h4>
+    </div>
+
+    <!-- Right Side: View All + Buttons -->
+    <div class="view-all-container">
+      <a href="#" class="view-all-link">View All &#8250;</a>
+      <div class="circle-buttons">
+        <button class="circle-button">&#8249;</button>
+        <button class="circle-button">&#8250;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Food Cards -->
+  <div class="food-card--holder">
+    {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+    {% if text_with_images.size > 0 %}
+      {% for text_with_image in text_with_images %}
+        <div class="food-card">
+          <!-- Icon Section -->
+          {% if text_with_image.settings['search-by-food_icon'] != blank %}
+            <div class="icon-section--block_img">
+              <img
+                src="{{ text_with_image.settings.search-by-food_icon | image_url }}"
+                alt="{{ text_with_image.settings.search-by-food_icon.alt }}"
+                height="{{ text_with_image.settings.search-by-food_icon.height }}"
+                width="{{ text_with_image.settings.search-by-food_icon.width }}"
+              >
+            </div>
+          {% endif %}
+
+          <!-- Icon Text -->
+          <div class="icon-text">
+            <p>{{ text_with_image.settings['icon-text'] }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "search-by-food",
+  "settings": [
+    {
+      "type": "text",
+      "id": "search-by-food_text",
+      "label": "Edit heading here",
+      "default": "Search by Food"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "icon-text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "search-by-food_icon",
+          "label": "Select Icon Here:"
+        },
+        {
+          "type": "text",
+          "id": "icon-text",
+          "label": "Enter icon text here:"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Search by Food"
+    }
+  ]
+}
+{% endschema %}

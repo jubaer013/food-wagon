@@ -1,0 +1,286 @@
+<style>
+  #shopify-section-{{ section.id }} .are-you-starving {
+    max-width: 1920px;
+    height: 620px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .are-you-starving--left {
+    max-width: 960px;
+    margin: auto;
+  }
+  #shopify-section-{{ section.id }} .are-you-starving_bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  #shopify-section-{{ section.id }} .icon-box--holder {
+    width: 856px;
+    height: 355.44px;
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  #shopify-section-{{ section.id }} .icon-box--holder .text-box {
+    width: 671px;
+    height: 129px;
+    gap: 15px;
+    border-radius: 16px;
+  }
+  #shopify-section-{{ section.id }} .text-box .are-you-starving_heading {
+    width: 671px;
+    height: 88px;
+  }
+  #shopify-section-{{ section.id }} .text-box .are-you-starving_heading h1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 88px;
+    text-align: left;
+    text-underline-position: from-font;
+    color: #FFFFFF;
+  }
+  #shopify-section-{{ section.id }} .text-box .are-you-starving_text {
+    width: 532px;
+    height: 26px;
+    border: 1px;
+  }
+  #shopify-section-{{ section.id }} .text-box .are-you-starving_text h6 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    color: #504F4F;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  #shopify-section-{{ section.id }} .whitebox {
+    width: 856px;
+    height: 194.44px;
+    border-radius: 16px;
+    background: #FFFFFF;
+    position: relative;
+    z-index: 1;
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  #shopify-section-{{ section.id }} .icon-section--block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 129px;
+    height: 38px;
+    padding: 10px 24px;
+    margin: 20px 15px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+   #shopify-section-{{ section.id }} .icon-radio {
+    display: none;
+  }
+   #shopify-section-{{ section.id }} .icon-radio:checked + .icon-section--block_img,
+  .icon-radio:checked + .icon-text {
+    background: #F172281A;
+  }
+  #shopify-section-{{ section.id }} .address-bar {
+    width: 593px;
+    height: 49px;
+    padding: 7px 0px 8px 16px;
+    gap: 12px;
+    border-radius: 8px;
+    background: #F5F5F5;
+    display: flex;
+    margin-left: 20px;
+  }
+  #shopify-section-{{ section.id }} .address-bar .address-bar_img {
+    width: 18px;
+    height: 34px;
+    margin-top: 5px;
+  }
+  #shopify-section-{{ section.id }} .address-bar .address-bar_text {
+    width: 162px;
+    height: 25px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #9E9E9E;
+    margin-top: -15px;
+  }
+  #shopify-section-{{ section.id }} .whitebox .whitebox-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 199px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(95.71deg, #FF7A7A -39.64%, #F75900 135.31%);
+    margin-bottom: 25px;
+  }
+  #shopify-section-{{ section.id }} .whitebox .whitebox-button a {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 60px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #shopify-section-{{ section.id }} .are-you-starving--right {
+    width: 619px;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  #shopify-section-{{ section.id }} .are-you-starving--right .are-you-starving_img {
+    width: 497.14px;
+    height: 497.14px;
+    position: absolute;
+    top: 30%;
+    z-index: 2;
+  }
+</style>
+
+<div class="are-you-starving">
+  {% if section.settings['are-you-starving_bg-img'] != blank %}
+    <div class="are-you-starving_bg-img">
+      <img
+        src="{{ section.settings.are-you-starving_bg-img | image_url: width: section.settings.are-you-starving_bg-img.width }}"
+        alt="{{ section.settings.are-you-starving_bg-img.alt }}"
+        height="{{ section.settings.are-you-starving_bg-img.height }}"
+        width="{{ section.settings.are-you-starving_bg-img.width }}"
+      >
+    </div>
+  {% endif %}
+  <div class="are-you-starving--left">
+    <div class="icon-box--holder">
+      <div class="text-box">
+        <div class="are-you-starving_heading">
+          <h1>{{ section.settings['are-you-starving_heading'] }}</h1>
+        </div>
+        <div class="are-you-starving_text">
+          <h6>{{ section.settings['are-you-starving_text'] }}</h6>
+        </div>
+      </div>
+      <div class="whitebox">
+        {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+        {% if text_with_images.size > 0 %}
+          {% for text_with_image in text_with_images %}
+            <div class="icon-section--block {% if forloop.first %} active-block {% endif %}">
+              {% if text_with_image.settings['are-you-starving_icon'] != blank %}
+                <div class="icon-section--block_img">
+                  <img
+                    src="{{ text_with_image.settings.are-you-starving_icon | image_url: width: text_with_image.settings.are-you-starving_icon.width }}"
+                    alt="{{ text_with_image.settings.block-imag.alt }}"
+                    height="{{ text_with_image.settings.are-you-starving_icon.height }}"
+                    width="{{ text_with_image.settings.are-you-starving_icon.width }}"
+                  >
+                </div>
+              {% endif %}
+              <div class="icon-text">
+                <p>
+                  <b>{{ text_with_image.settings['icon-text'] }}</b>
+                </p>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+        <div class="address-bar">
+          <div class="address-bar_img">
+            <img src="https://cdn.shopify.com/s/files/1/0621/4264/4293/files/Icon.png?v=1730225033">
+          </div>
+          <div class="address-bar_text">
+            <p>Enter Your Address</p>
+          </div>
+        </div>
+        <div class="whitebox-button">
+          <a href="#">{{ section.settings['button-text'] }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="are-you-starving--right">
+    {% if section.settings['are-you-starving_img'] != blank %}
+      <div class="are-you-starving_img">
+        <img
+          src="{{ section.settings.are-you-starving_img | image_url: width: section.settings.are-you-starving_img.width }}"
+          alt="{{ section.settings.are-you-starving_img.alt }}"
+          height="{{ section.settings.are-you-starving_img.height }}"
+          width="{{ section.settings.are-you-starving_img.width }}"
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Are you starving",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "are-you-starving_img",
+      "label": "Right Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "are-you-starving_bg-img",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "are-you-starving_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "are-you-starving_text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name": "Image with Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "are-you-starving_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon-text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Are you starving",
+    }
+  ]
+}
+{% endschema %}

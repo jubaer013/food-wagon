@@ -1,0 +1,132 @@
+<style>
+    #shopify-section-{{ section.id }} .fw-features {
+       max-width: 1924px;
+       height: 456px;
+       padding: 130px 0px 80px 0px;
+       gap: 124px;
+       background: #FEEFD0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+
+    #shopify-section-{{ section.id }} .fw-features .fw-features--box {
+       max-width: 1230px;
+       padding: 55px;
+       border-radius: 46px;
+       background: #FFFFFF;
+       box-shadow: 0px 27px 82px 0px #FFAE0047, 0px 14px 15px 0px #FFAE0003;
+       margin: auto;
+     }
+
+     #shopify-section-{{ section.id }} .fw-features .fw-features--box .icon-section {
+       display: flex;
+       justify-content: space-around;
+       gap: 30px;
+       align-items: center;
+     }
+
+     #shopify-section-{{ section.id }} .fw-features .fw-features--box .icon-section .icon-section--block {
+       display: flex;
+       align-items: center;
+       gap: 20px;
+     }
+
+
+     #shopify-section-{{ section.id }} .fw-features .fw-features--box .icon-section .icon-section--block .icon-section--block_img img{
+       width: 136px;
+       height: 136px;
+     }
+
+     #shopify-section-{{ section.id }} .fw-features .fw-features--box .icon-section .icon-section--block .text-box {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       text-align: left;
+       width: 116px;
+       height: 84px;
+     }
+
+     #shopify-section-{{ section.id }} .fw-features .fw-features--box .icon-section .icon-section--block .text-box .icon-heading h2 {
+       font-family: 'Source Sans 3', sans-serif;
+       font-size: 22px;
+       font-weight: 700;
+       line-height: 1.2;
+       color: #FB3C00;
+       background: linear-gradient(92.84deg, #FB3C00 -47.72%, #FFB800 136.81%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+     }
+       #shopify-section-{{ section.id }} .fw-features .fw-features--box .icon-section .icon-section--block .icon-hr {
+       width: 2px;
+       height: 96px;
+       background: #CFCFCF;
+  }
+     }
+</style>
+
+<div class="fw-features">
+  <div class="fw-features--box">
+    {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+    {% if text_with_images.size > 0 %}
+      <div class="icon-section">
+        {% for text_with_image in text_with_images %}
+          <div class="icon-section--block">
+            {% if text_with_image.settings['block-image'] != blank %}
+              <div class="icon-section--block_img">
+                <img
+                  src="{{ text_with_image.settings.block-image | image_url: width: text_with_image.settings.block-image.width }}"
+                  alt="{{ text_with_image.settings.block-imag.alt }}"
+                  height="{{ text_with_image.settings.block-image.height }}"
+                  width="{{ text_with_image.settings.block-image.width }}"
+                >
+              </div>
+            {% endif %}
+
+            <div class="text-box">
+              <div class="icon-heading">
+                <h2>{{ text_with_image.settings['icon-text'] }}</h2>
+              </div>
+            </div>
+            {% unless forloop.last %}
+              <div class="icon-hr">
+                <hr>
+              </div>
+            {% endunless %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "fw-features",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name":"text-with-image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-image",
+          "label": "Select image"
+        },
+        {
+          "type": "text",
+          "id": "icon-text",
+          "label": "Edit icon's heading here: "
+        }
+      ]
+     }
+  ],
+
+  "presets": [
+    {
+      "name": "FW Features"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,224 @@
+<style>
+   #shopify-section-{{ section.id }} .app-section{
+     max-width: 1924px;
+     width: 100%;
+     background: #FEEFD0;
+     display: flex;
+   }
+  
+  #shopify-section-{{ section.id }} .app-section .app-section--left{
+    max-width: 962px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  #shopify-section-{{ section.id }} .app-section .app-section--left .image-holder{
+    width: 602.81px;
+    height: 663.97px;
+    position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .app-section .app-section--left .image-holder .iphone-top{
+  width: 328.97px;
+  height: 663.97px;
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  z-index: 2;
+}
+  
+
+  #shopify-section-{{ section.id }} .app-section .app-section--left .image-holder .iphone-bottom{
+  width: 292.79px;
+  height: 629.74px;
+  position: absolute;
+  top: 36%; 
+  left: 13.56px; 
+  z-index: 0;
+  }
+  
+  #shopify-section-{{ section.id }} .app-section .app-section--right{
+    max-width: 962px;
+    width: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .app-section .app-section--right .app-section--text{
+    width: 432px;
+    height: 163px;
+    gap: 16px;
+    margin: auto;
+  }
+
+  #shopify-section-{{ section.id }} .app-section .app-section--right .app-section--text .app-section--heading h1{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 73px;
+    text-align: left;
+    background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  #shopify-section-{{ section.id }} .app-section .app-section--right .app-section--text .app-section--details{
+    width: 432px;
+    height: 75px;
+  }
+
+   #shopify-section-{{ section.id }} .app-section .app-section--right .app-section--text .app-section--details p{
+     font-family: "Source Sans 3", sans-serif;
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 25.2px;
+     text-align: left;
+     color: #827E7E;
+   }
+  
+  #shopify-section-{{ section.id }} .app-section .app-section--right .white-box--container{
+    width: 390.5px;
+    height: 60px;
+    gap: 8px;
+    display: flex;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px
+  }
+
+   #shopify-section-{{ section.id }} .app-section .app-section--right .white-box{
+     width: 180px;
+     height: 60px;
+     gap: 8px;
+     border-radius: 7px;
+     background: #FFFFFF;
+     box-shadow: 0px 20px 40px 0px #FFAE004A;
+     box-shadow: 0px 5px 10px 0px #FFAE0042;
+     display: flex;
+     align-items: center;
+     padding: 10px;
+   }
+
+   #shopify-section-{{ section.id }} .app-section .app-section--right .white-box img {
+     width: 40px;
+     height: 40px;
+     margin-right: 10px;
+   }
+
+   #shopify-section-{{ section.id }} .app-section .app-section--right .white-box .text-content {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+   }
+
+   #shopify-section-{{ section.id }} .app-section .app-section--right .white-box .text-content .button-alt {
+     font-family: "Source Sans 3", sans-serif;
+     font-size: 12px;
+     font-weight: 300;
+     color: #827E7E;
+     margin: 0;
+   }
+
+   #shopify-section-{{ section.id }} .app-section .app-section--right .white-box .text-content .button-heading {
+     font-family: "Source Sans 3", sans-serif;
+     font-size: 18px;
+     font-weight: 500;
+     color: #212121;
+     margin: 0;
+   }
+</style>
+
+<div class="app-section">
+  <div class="app-section--left">
+    <div class="image-holder">
+          <div class="iphone-top">
+      <img src="https://cdn.shopify.com/s/files/1/0621/4264/4293/files/top-iphone.png?v=1730198481" alt="iPhone top">
+    </div>
+    <div class="iphone-bottom">
+      <img src="https://cdn.shopify.com/s/files/1/0621/4264/4293/files/iPhone.png?v=1734009172" alt="iPhone bottom">
+    </div>
+    </div>
+  </div>
+
+  <div class="app-section--right">
+    <div class="app-section--text">
+      <div class="app-section--heading">
+        <h1>{{ section.settings['app-section--heading'] }}</h1>
+      </div>
+      <div class="app-section--details">
+        <p>{{ section.settings['app-section--details'] }}</p>
+      </div>
+    </div>
+    <div class="white-box--container">
+      {% assign button_links = section.blocks | where: 'type', 'button_link' %}
+      {% if button_links.size > 0 %}
+        {% for button in button_links %}
+          <div class="white-box">
+            {% if button.settings['button-image'] != blank %}
+              <img src="{{ button.settings['button-image'] | image_url }}" alt="{{ button.settings['button-alt'] }}">
+            {% endif %}
+            <div class="text-content">
+              <p class="button-alt">{{ button.settings['button-alt'] }}</p>
+              <p class="button-heading">{{ button.settings['button-hd'] }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "App Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "app-section--heading",
+      "label": "Heading",
+      "default": "Install the app"
+    },
+    {
+      "type": "textarea",
+      "id": "app-section--details",
+      "label": "Details",
+      "default": "It's never been easier to order food. Look for the finest discounts and you'll be lost in a world of delectable food."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "button_link",
+      "name": "Button Link",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "button-image",
+          "label": "Button Image"
+        },
+        {
+          "type": "url",
+          "id": "button-link",
+          "label": "Button Link URL"
+        },
+        {
+          "type": "text",
+          "id": "button-alt",
+          "label": "Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "button-hd",
+          "label": "button heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "App Section"
+    }
+  ]
+}
+{% endschema %}

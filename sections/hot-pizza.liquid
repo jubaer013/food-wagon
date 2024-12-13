@@ -1,0 +1,180 @@
+<style>
+  #shopify-section-{{ section.id }} .hot-pizza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1480px;
+    width: 1480px;
+    height: 512px;
+    margin: 0 auto;
+    gap: 0;
+    border-radius: 16px;
+  }
+
+ #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%; 
+  max-width: 961px;
+}
+
+#shopify-section-{{ section.id }} .hot-pizza .hot-pizza-right .hot-pizza-image img {
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+  #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left {
+    max-width: 519px;
+    flex: 1;
+    background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) -42.47%, rgba(253, 237, 202, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    flex: 1;
+    height: 100%;
+  }
+   #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza--font-section{
+     width: 407px;
+     height: 292px;
+     gap: 19px;
+     opacity: 0px;
+     margin-right: auto;
+     margin-left: auto;
+
+  }
+
+  #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza--font-section  .hot-pizza-heading {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52.8px;
+    text-align: left;
+    color: #000;
+  }
+  #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza--font-section  .hot-pizza-heading p strong{
+   color: #FFB800;
+
+  }
+
+  #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza--font-section .hot-pizza-text {
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+    color: #616161;
+  }
+    #shopify-section-{{ section.id }}  .hot-pizza .hot-pizza-left .hot-pizza-button {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+   #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza-button .hot-pizza-button-link {
+    display: inline-block;
+    width: 407px;
+    height: 60px;
+    padding: 10px 20px; 
+    border-radius: 8px;
+    background: linear-gradient(92.84deg, #FFB800 -47.72%, #FF8A00 136.81%);
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+    #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza-button .hot-pizza-button-link:hover {
+        background-color: #e16524;
+        box-shadow: 0px 14px 32px 0px #FFB20E4A;
+
+        box-shadow: 0px 5px 8px 0px #DE97003D;
+
+    }
+
+    #shopify-section-{{ section.id }} .hot-pizza .hot-pizza-left .hot-pizza-button .hot-pizza-button-link a {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+</style>
+
+<div class="hot-pizza">
+  <div class="hot-pizza-left">
+    <div class="hot-pizza--font-section">
+    <div class="hot-pizza-heading">
+      <p>{{ section.settings.hot-pizza-heading }}</p>
+    </div>
+    <div class="hot-pizza-text">
+      <p>{{ section.settings.hot-pizza-text }}</p>
+    </div>
+    </div>
+    <div class= "hot-pizza-button">
+      <div class="hot-pizza-button-link">
+      <a href="#">{{ section.settings.button-text }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="hot-pizza-right">
+   {% if section.settings.hot-pizza-image != blank %}
+        <div class="hot-pizza-image">
+          <img
+            src="{{ section.settings.hot-pizza-image | image_url: width: section.settings.hot-pizza-image.width }}"
+            alt="{{ section.settings.hot-pizza-image.alt }}"
+            height="{{ section.settings.hot-pizza-image.height }}"
+            width="{{ section.settings.hot-pizza-image.width }}"
+          />
+        </div>
+    {% endif %}
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "hot-pizza",
+    "settings": [
+
+       {
+      "type": "richtext",
+      "id": "hot-pizza-heading",
+      "label": "Heading here"
+    },
+    {
+      "type": "textarea",
+      "id": "hot-pizza-text",
+      "label": "Your text here",
+      "default": "Pair up with a friend and enjoy the hot and crispy pizza pops. Try it with the best deals."
+    },
+    {
+       "type": "text",
+       "id": "button-text",
+       "label": "Edit Button",
+       "default": "Proceed to Order >"
+    },
+    {
+        "type": "image_picker",
+        "id": "hot-pizza-image",
+        "label": "Image"
+    }
+    ],
+    "presets": [
+      {
+        "name": "Hot pizza"
+      }
+    ]
+  }
+{% endschema %}

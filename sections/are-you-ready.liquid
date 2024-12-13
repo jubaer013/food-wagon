@@ -1,0 +1,115 @@
+<style>
+    #shopify-section-{{ section.id }} .are-you-ready {
+        width: 100%;
+        max-width: 1920px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-family: "Source Sans 3", sans-serif;
+    }
+
+    #shopify-section-{{ section.id }} .are-you-ready img {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    #shopify-section-{{ section.id }} .are-you-ready .button-heading {
+        z-index: 2;
+    }
+
+    #shopify-section-{{ section.id }} .are-you-ready .are-you-ready-text {
+        width: 728px;
+        height: 112px;
+        top: 91px;
+        left: 596px;
+        opacity: 0px;
+        font-size: 57px;
+        font-weight: 900;
+        line-height: 55.57px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    #shopify-section-{{ section.id }} .are-you-ready .are-you-ready-button {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+   #shopify-section-{{ section.id }} .are-you-ready .are-you-ready-button .are-you-ready-button-link {
+    display: inline-block;
+    width: 233px;
+    height: 60px;
+    padding: 10px 20px; 
+    border-radius: 8px;
+    background: linear-gradient(93.41deg, #F17228 -5.63%, #F15E28 100.8%);
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+    #shopify-section-{{ section.id }} .are-you-ready .are-you-ready-button .are-you-ready-button-link:hover {
+        background-color: #e16524;
+        box-shadow: 0px 14px 32px 0px #FFB20E4A;
+
+        box-shadow: 0px 5px 8px 0px #DE97003D;
+
+    }
+
+    #shopify-section-{{ section.id }} .are-you-ready .are-you-ready-button .are-you-ready-button-link a {
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+</style>
+
+<div class="are-you-ready">
+    <img src="https://cdn.shopify.com/s/files/1/0621/4264/4293/files/Are_you_ready.png?v=1729094941" alt="Background Image" width="100%" height="100%">
+    <div class="button-heading">
+        <div class="are-you-ready-text">
+            <p>{{ section.settings.heading }}</p>
+        </div>
+        <div class="are-you-ready-button">
+            <div class="are-you-ready-button-link">
+                <a href="#">{{ section.settings.button-text }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "are-you-ready",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Title here",
+            "default": "Are you ready to order with <br> the best deals?"
+        },
+        {
+            "type": "text",
+            "id": "button-text",
+            "label": "Edit Button",
+            "default": "Proceed to Order >"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Are you ready"
+        }
+    ]
+}
+{% endschema %}

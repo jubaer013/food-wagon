@@ -1,0 +1,149 @@
+<style>
+  #shopify-section-{{ section.id }} .how-does-it-work {
+      max-width: 1920px;
+      height: 518px;
+      background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) -42.47%, rgba(253, 237, 202, 0) 100%);
+      padding: 80px ;
+      text-align: center;
+      align-items: center;
+    }
+
+   #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container {
+      width: 1384px;
+      margin: 0 auto;
+
+    }
+
+   #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container .how-does-it-work-heading h2 {
+      width: 100%;
+      font-family: 'SOURCE SANS 3', sans-serif;
+      font-size: 43px;
+      font-weight: 700;
+      line-height: 48.16px;
+      text-align: center;
+      color: #F17228;
+      margin-bottom: 50px;
+    }
+
+    #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container .icon-section {
+      display: flex;
+      justify-content: space-around;
+      max-width: 367px;
+      height: 239px;
+      gap: 20px;
+
+    }
+    #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container .icon-section .icon-section--block .icon-section--block_img{
+      height: 112px;
+      width: 86px;
+      margin-left: 70px;
+
+    }
+    #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container .icon-section .icon-section--block .text-box{
+     width: 307px;
+     height: 86px;
+     gap: 10px;
+     margin-top:40px;
+    }
+    #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container .icon-section .icon-section--block .text-box .icon-heading{
+     width: 307px;
+     height: 26px;
+     font-family: 'SOURCE SANS 3', sans-serif;
+     font-size: 22px;
+     font-weight: 700;
+     line-height: 26.4px;
+     text-align: center;
+    }
+
+    #shopify-section-{{ section.id }} .how-does-it-work .how-does-it-work-container .icon-section .icon-section--block .text-box .icon-details{
+      width: 307px;
+      height: 50px;
+      font-family: Open Sans;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25.2px;
+      text-align: center;
+      color: #9E9E9E;
+    }
+</style>
+
+<div class="how-does-it-work">
+  <div class="how-does-it-work-container">
+    <div class="how-does-it-work-heading">
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+    {% if text_with_images.size > 0 %}
+      <div class="icon-section">
+        {% for text_with_image in text_with_images %}
+          <div class="icon-section--block">
+            {% if text_with_image.settings['block-image'] != blank %}
+              <div class="icon-section--block_img">
+                <img
+                  src="{{ text_with_image.settings.block-image | image_url: width: text_with_image.settings.block-image.width }}"
+                  alt="{{ text_with_image.settings.block-imag.alt }}"
+                  height="{{ text_with_image.settings.block-image.height }}"
+                  width="{{ text_with_image.settings.block-image.width }}"
+                >
+              </div>
+            {% endif %}
+            <div class="text-box">
+              <div class="icon-heading">
+                <h2>{{ text_with_image.settings['icon-heading'] }}</h2>
+              </div>
+              <div class="icon-details">
+                <p>{{ text_with_image.settings['icon-text'] }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "how-does-it-work",
+  "settings": [
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title here",
+      "default": "How does it work"
+  }
+     ],
+
+  "blocks": [
+    {
+      "type": "image_with_text",
+      "name":"text-with-image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-image",
+          "label": "Select image"
+        },
+        {
+          "type": "text",
+          "id": "icon-heading",
+          "label": "Edit icon's heading here: "
+        },
+        {
+          "type": "textarea",
+          "id": "icon-text",
+          "label": "Edit icon's text here: "
+        }
+      ]
+    }
+  ],
+
+
+  "presets": [
+    {
+      "name": "How does it work"
+    }
+   ]
+}
+{% endschema %}

@@ -1,0 +1,205 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    max-width: 1924px;
+    height: 515px;
+    align-content: center;
+  }
+  #shopify-section-{{ section.id }} .discount-container {
+    width: 1476px;
+    height: 415px;
+    gap: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+  }
+
+  #shopify-section-{{ section.id }} .discount-card {
+    width: 356.91px;
+    height: 415px;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #shopify-section-{{ section.id }} .image-section {
+    display: flex;
+    gap: 16px;
+  }
+
+  #shopify-section-{{ section.id }} .image--block_img {
+    position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .image--block_img img {
+    width: 356.91px;
+    height: 301px;
+    border-radius: 16px;
+  }
+
+  #shopify-section-{{ section.id }} .discount-amount {
+    position: absolute;
+    width: 140px;
+    height: 83px;
+    top: 219px;
+    padding: 10px 18px 11px 18px;
+    border-radius: 0px 32px 0px 0px;
+    background: #FFB30E;
+    z-index: 1;
+  }
+
+  #shopify-section-{{ section.id }} .discount-amount_textbox {
+    width: 104px;
+    height: 62px;
+    position: relative;
+    top: -20px;
+  }
+
+  #shopify-section-{{ section.id }} .discount-amount_textbox p strong{
+    margin: auto;
+    color: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 72.08px;
+    text-align: left;
+  }
+
+  #shopify-section-{{ section.id }} .discount-amount_textbox p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+    word-wrap: break-word;
+    color: #FFFFFF;
+    position: relative;
+    top: -20px;
+  }
+
+  #shopify-section-{{ section.id }} .text-box {
+    width: 204px;
+    height: 82px;
+    gap: 14px;
+  }
+
+  #shopify-section-{{ section.id }} .image-heading {
+    width: 106px;
+    height: 26px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    margin-top: -20px;
+  }
+
+  #shopify-section-{{ section.id }} .discount-time {
+    width: 172px;
+    height: 26px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26.4px;
+    text-align: left;
+    color: #F17228;
+    align-content: center;
+    z-index: 1;
+    margin-top: -20px;
+  }
+
+  #shopify-section-{{ section.id }} .discount-bg {
+    width: 204px;
+    height: 42px;
+    padding: 8px 16px;
+    justify-content: space-between;
+    border-radius: 8px;
+    background: #F1722833;
+    margin-top: 10px; /* Adds 10px gap between image heading and discount time bg */
+  }
+</style>
+
+<div class="discount">
+  <div class="discount-container">
+    <div class="discount-card">
+      {% assign text_with_images = section.blocks | where: 'type', 'image_with_text' %}
+      {% if text_with_images.size > 0 %}
+        <div class="image-section">
+          {% for text_with_image in text_with_images %}
+            <div class="image--block">
+              {% if text_with_image.settings['block-image'] != blank %}
+                <div class="image--block_img">
+                  <div class="discount-amount">
+                    <div class="discount-amount_textbox">
+                      <p>{{ text_with_image.settings.discount }}</p>
+                    </div>
+                  </div>
+                  <img
+                    src="{{ text_with_image.settings.block-image | image_url: width: text_with_image.settings.block-image.width }}"
+                    alt="{{ text_with_image.settings.block-image.alt }}"
+                    height="{{ text_with_image.settings.block-image.height }}"
+                    width="{{ text_with_image.settings.block-image.width }}"
+                  >
+                </div>
+              {% endif %}
+              <div class="text-box">
+                <div class="image-heading">
+                  <p>
+                    <b>{{ text_with_image.settings['image-text'] }}</b>
+                  </p>
+                </div>
+                <div class="discount-bg">
+                  <div class="discount-time">
+                    <p>
+                      <b>{{ text_with_image.settings['discount-time'] }}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "discount",
+  "settings": [],
+   "blocks": [
+    {
+      "type": "image_with_text",
+      "name":"text-with-image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block-image",
+          "label": "Select image"
+        },
+        {
+          "type": "richtext",
+          "id": "discount",
+          "label": "Add Discount: "
+        },
+        {
+          "type": "text",
+          "id": "image-text",
+          "label": "Edit image's heading here: "
+        },
+        {
+          "type": "text",
+          "id": "discount-time",
+          "label": "Dicount Time: "
+        }
+
+      ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Discount"
+    }
+  ]
+}
+{% endschema %}
