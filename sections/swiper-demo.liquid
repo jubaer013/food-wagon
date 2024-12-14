@@ -1,6 +1,65 @@
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+<div class="swiperSlider">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">    
+    {% for i in (0..5) %}
+      <div class="swiper-slide">Slide 1</div>
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper('.swiperSlider', {
+      speed: 400,
+      slidesPerView: 1,
+      spaceBetween: 50,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Swiper Demo",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Swiper Demo"
+      }
+    ]
   }
 {% endschema %}
