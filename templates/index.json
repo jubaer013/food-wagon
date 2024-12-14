@@ -1,1 +1,490 @@
-{"sections":{"are_you_starving_WYyqbP":{"type":"are-you-starving","blocks":{"image_with_text_VUGkAt":{"type":"image_with_text","settings":{"are-you-starving_icon":"shopify:\/\/shop_images\/bike.svg","icon-text":"Delivery"}},"image_with_text_iwrKen":{"type":"image_with_text","settings":{"are-you-starving_icon":"shopify:\/\/shop_images\/bag.svg","icon-text":"Pickup"}}},"block_order":["image_with_text_VUGkAt","image_with_text_iwrKen"],"settings":{"are-you-starving_img":"shopify:\/\/shop_images\/starving_Overlay.png","are-you-starving_bg-img":"shopify:\/\/shop_images\/Group_1_1.png","are-you-starving_heading":"Are you starving?","are-you-starving_text":"Within a few clicks, find meals that are accessible near you","button-text":"🔍 Find food"}},"discount_Xbhtjp":{"type":"discount","blocks":{"image_with_text_9RKYjD":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/d1.png","discount":"<p><strong>15<\/strong>%off<\/p>","image-text":"Greys Vage","discount-time":"6 Days Remaining"}},"image_with_text_HkrNGy":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/d2.png","discount":"<p><strong>10<\/strong>%off<\/p>","image-text":"Greys Vage","discount-time":"6 Days Remaining"}},"image_with_text_gyB3N9":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/d3.png","discount":"<p><strong>25<\/strong>%off<\/p>","image-text":"Greys Vage","discount-time":"7 Days Remaining"}},"image_with_text_zUN8X7":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/d4.png","discount":"<p><strong>20<\/strong>%off<\/p>","image-text":"Greys Vage","discount-time":"8 Days Remaining"}}},"block_order":["image_with_text_9RKYjD","image_with_text_HkrNGy","image_with_text_gyB3N9","image_with_text_zUN8X7"],"settings":{}},"how_does_it_work_AKyCmf":{"type":"how-does-it-work","blocks":{"image_with_text_AUmVMA":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/select-location.png","icon-heading":"Select location","icon-text":"Choose the location where your food will be delivered."}},"image_with_text_Wec7hT":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/choose-order.png","icon-heading":"Choose order","icon-text":"Check over hundreds of menus to pick your favorite food"}},"image_with_text_DWUHDe":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/pay-advance.png","icon-heading":"Pay advanced","icon-text":"It's quick, safe, and simple. Select several methods of payment"}},"image_with_text_LnLdQQ":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/enjoy-meals.png","icon-heading":"Enjoy meals","icon-text":"Food is made and delivered directly to your home."}}},"block_order":["image_with_text_AUmVMA","image_with_text_Wec7hT","image_with_text_DWUHDe","image_with_text_LnLdQQ"],"settings":{"heading":"How does it work"}},"popular_items_CcCNFQ":{"type":"popular-Items","blocks":{"image_with_text_Y83d6z":{"type":"image_with_text","settings":{"popular-items_icon":"shopify:\/\/shop_images\/cheese_burger.png","icon-text":"Cheese Burger","location":"Burger Arena","price":"3.88","order-now":"Order now"}},"image_with_text_94bjxM":{"type":"image_with_text","settings":{"popular-items_icon":"shopify:\/\/shop_images\/toffee.png","icon-text":"Toffe’s Cake","location":"Top Sticks","price":"4.00","order-now":"Order now"}},"image_with_text_kEnyw9":{"type":"image_with_text","settings":{"popular-items_icon":"shopify:\/\/shop_images\/Dancake.png","icon-text":"Dancake","location":"Cake World","price":"1.99","order-now":"Order now"}},"image_with_text_EXYAAw":{"type":"image_with_text","settings":{"popular-items_icon":"shopify:\/\/shop_images\/crispy_sandwitch.png","icon-text":"Crispy Sandwitch","location":"Fastfood Dine","price":"3.00","order-now":"Order now"}},"image_with_text_AhPkmt":{"type":"image_with_text","settings":{"popular-items_icon":"shopify:\/\/shop_images\/Thai_soup.png","icon-text":"Thai  Soup","location":"Foody man","price":"2.79","order-now":"Order now"}}},"block_order":["image_with_text_Y83d6z","image_with_text_94bjxM","image_with_text_kEnyw9","image_with_text_EXYAAw","image_with_text_AhPkmt"],"settings":{"popular-items_text":"Popular items"}},"featured_restaurants_DWQ7PB":{"type":"featured-restaurants","blocks":{"image_with_text_NcgNJk":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/food_world.png","restaurant-logo":"shopify:\/\/shop_images\/food_world_icon_e0c3f74f-6dd5-4135-ac26-649b0fca5ca1.png","image-text":"Foodworld","star-rating":"46","discount-tag":"20% off","delivery-type":"Fast","discount-time":"Open tomorrow"}},"image_with_text_WwUCmA":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/pizzapino.png","restaurant-logo":"shopify:\/\/shop_images\/pizzapino_icon_b8060d30-a7c9-422c-bf2f-4e5d403f0c7f.png","image-text":"Pizzahub","star-rating":"40","discount-tag":"15% off","delivery-type":"Fast","discount-time":"Opens Tomorrow"}},"image_with_text_xDTHVD":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/donuts_hut.png","restaurant-logo":"shopify:\/\/shop_images\/donuts_hut_icon_907606dd-46a6-48f4-a4c3-214e23e4b94b.png","image-text":"Donuts hut","star-rating":"20","discount-tag":"10% off","delivery-type":"Fast","discount-time":"Open Now"}},"image_with_text_WWdDzQ":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/donuts_hut2.png","restaurant-logo":"shopify:\/\/shop_images\/donuts_hut_icon_2.png","image-text":"Donuts hut","star-rating":"50","discount-tag":"15% off","delivery-type":"Fast","discount-time":"Open now"}},"image_with_text_T47JCz":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/Ruby_tuesday.png","restaurant-logo":"shopify:\/\/shop_images\/Ruby_tuesday_icon_08aecad3-7374-42a3-ad68-4d025f6ac82a.png","image-text":"Ruby Tuesday","star-rating":"26","discount-tag":"!0% off","delivery-type":"Fast","discount-time":"Open now"}},"image_with_text_PpmbXr":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/Kuakata_Fried_Chicken.png","restaurant-logo":"shopify:\/\/shop_images\/Kuakata_Fried_Chicken_icon_a010c6c2-1580-4170-898e-003e7f144694.png","image-text":"Kuakata Fried Chicken","star-rating":"53","discount-tag":"25% off","delivery-type":"Fast","discount-time":"Open now"}},"image_with_text_Hmjxdf":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/Red_Square.png","restaurant-logo":"shopify:\/\/shop_images\/Red_Square_icon_96346fa1-4db7-4dd6-aa17-a5b6017441ec.png","image-text":"Red Square","star-rating":"45","discount-tag":"10% off","delivery-type":"Fast","discount-time":"Open now"}},"image_with_text_Yff7Kc":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/Taco_Bell.png","restaurant-logo":"shopify:\/\/shop_images\/Taco_Bell_icon_7196d301-87ba-446b-8583-8c8538322c47.png","image-text":"Taco Bell","star-rating":"35","discount-tag":"10% off","delivery-type":"Fast","discount-time":"Open now"}}},"block_order":["image_with_text_NcgNJk","image_with_text_WwUCmA","image_with_text_xDTHVD","image_with_text_WWdDzQ","image_with_text_T47JCz","image_with_text_PpmbXr","image_with_text_Hmjxdf","image_with_text_Yff7Kc"],"settings":{"featured-restaurants-heading":"Featured Restaurants"}},"search_by_food_Q97NdC":{"type":"search-by-food","blocks":{"image_with_text_nMBcY3":{"type":"image_with_text","settings":{"search-by-food_icon":"shopify:\/\/shop_images\/pizza.png","icon-text":"Pizza"}},"image_with_text_hyEQPk":{"type":"image_with_text","settings":{"search-by-food_icon":"shopify:\/\/shop_images\/burger.png","icon-text":"Burger"}},"image_with_text_fKx8c4":{"type":"image_with_text","settings":{"search-by-food_icon":"shopify:\/\/shop_images\/noodles.png","icon-text":"Noodles"}},"image_with_text_qG9DaL":{"type":"image_with_text","settings":{"search-by-food_icon":"shopify:\/\/shop_images\/snadwitch.png","icon-text":"Sub-sandiwch"}},"image_with_text_heP6Jn":{"type":"image_with_text","settings":{"search-by-food_icon":"shopify:\/\/shop_images\/chowmein.png","icon-text":"Chowmein"}},"image_with_text_NqV7YK":{"type":"image_with_text","settings":{"search-by-food_icon":"shopify:\/\/shop_images\/steak.png","icon-text":"Steak"}}},"block_order":["image_with_text_nMBcY3","image_with_text_hyEQPk","image_with_text_fKx8c4","image_with_text_qG9DaL","image_with_text_heP6Jn","image_with_text_NqV7YK"],"settings":{"search-by-food_text":"Search by Food"}},"fw_features_hBdrht":{"type":"fw-features","blocks":{"image_with_text_VNketA":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/discount.png","icon-text":"Daily Discounts"}},"image_with_text_q3RPHA":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/live_tracking.png","icon-text":"Live Tracing"}},"image_with_text_UkzGF4":{"type":"image_with_text","settings":{"block-image":"shopify:\/\/shop_images\/quick_delivery.png","icon-text":"Quick Delivery"}}},"block_order":["image_with_text_VNketA","image_with_text_q3RPHA","image_with_text_UkzGF4"],"settings":{}},"app_section_9RCBKQ":{"type":"app-section","blocks":{"button_link_tEVJ8t":{"type":"button_link","settings":{"button-image":"shopify:\/\/shop_images\/Google_Play_logo.png","button-link":"","button-alt":"GET IT ON","button-hd":"Google play"}},"button_link_Jjkgyx":{"type":"button_link","settings":{"button-image":"shopify:\/\/shop_images\/Apple_logo.png","button-link":"","button-alt":"Download on the","button-hd":"App store"}}},"block_order":["button_link_tEVJ8t","button_link_Jjkgyx"],"settings":{"app-section--heading":"Install the app","app-section--details":"It's never been easier to order food. Look for the finest discounts and you'll be lost in a world of delectable food."}},"best_deals_dz3gmh":{"type":"best-deals","settings":{"best-deals-heading":"<p>Best deals <strong>Crispy Sandwiches<\/strong><\/p>","best-deals-text":"Enjoy the large size of sandwiches. Complete perfect slice of sandwiches.","button-text":"Proceed to Order >","best-deals-image":"shopify:\/\/shop_images\/best-deal.png"}},"celebrate_parties_dhVGXQ":{"type":"celebrate-parties","settings":{"celebrate-parties-heading":"<p>Celebrate parties with <strong>Fried Chicken<\/strong><\/p>","celebrate-parties-text":"Get the best fried chicken smeared with a lip smacking lemon chili flavor. Check out best deals for fried chicken.","button-text":"Proceed to Order >","celebrate-parties-image":"shopify:\/\/shop_images\/Right.png"}},"hot_pizza_HrYrfV":{"type":"hot-pizza","settings":{"hot-pizza-heading":"<p>Wanna eat hot & spicy <strong>Pizza?<\/strong><\/p>","hot-pizza-text":"Pair up with a friend and enjoy the hot and crispy pizza pops. Try it with the best deals.","button-text":"Proceed to Order >","hot-pizza-image":"shopify:\/\/shop_images\/hot-pizza.png"}},"are_you_ready_GBLe4f":{"type":"are-you-ready","settings":{"heading":"Are you ready to order with the best deals?","button-text":"Proceed to Order >"}}},"order":["are_you_starving_WYyqbP","discount_Xbhtjp","how_does_it_work_AKyCmf","popular_items_CcCNFQ","featured_restaurants_DWQ7PB","search_by_food_Q97NdC","fw_features_hBdrht","app_section_9RCBKQ","best_deals_dz3gmh","celebrate_parties_dhVGXQ","hot_pizza_HrYrfV","are_you_ready_GBLe4f"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "are_you_starving_WYyqbP": {
+      "type": "are-you-starving",
+      "blocks": {
+        "image_with_text_VUGkAt": {
+          "type": "image_with_text",
+          "settings": {
+            "are-you-starving_icon": "shopify://shop_images/bike.svg",
+            "icon-text": "Delivery"
+          }
+        },
+        "image_with_text_iwrKen": {
+          "type": "image_with_text",
+          "settings": {
+            "are-you-starving_icon": "shopify://shop_images/bag.svg",
+            "icon-text": "Pickup"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_VUGkAt",
+        "image_with_text_iwrKen"
+      ],
+      "settings": {
+        "are-you-starving_img": "shopify://shop_images/starving_Overlay.png",
+        "are-you-starving_bg-img": "shopify://shop_images/Group_1_1.png",
+        "are-you-starving_heading": "Are you starving?",
+        "are-you-starving_text": "Within a few clicks, find meals that are accessible near you",
+        "button-text": "🔍 Find food"
+      }
+    },
+    "discount_Xbhtjp": {
+      "type": "discount",
+      "blocks": {
+        "image_with_text_9RKYjD": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/d1.png",
+            "discount": "<p><strong>15</strong>%off</p>",
+            "image-text": "Greys Vage",
+            "discount-time": "6 Days Remaining"
+          }
+        },
+        "image_with_text_HkrNGy": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/d2.png",
+            "discount": "<p><strong>10</strong>%off</p>",
+            "image-text": "Greys Vage",
+            "discount-time": "6 Days Remaining"
+          }
+        },
+        "image_with_text_gyB3N9": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/d3.png",
+            "discount": "<p><strong>25</strong>%off</p>",
+            "image-text": "Greys Vage",
+            "discount-time": "7 Days Remaining"
+          }
+        },
+        "image_with_text_zUN8X7": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/d4.png",
+            "discount": "<p><strong>20</strong>%off</p>",
+            "image-text": "Greys Vage",
+            "discount-time": "8 Days Remaining"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_9RKYjD",
+        "image_with_text_HkrNGy",
+        "image_with_text_gyB3N9",
+        "image_with_text_zUN8X7"
+      ],
+      "settings": {}
+    },
+    "how_does_it_work_AKyCmf": {
+      "type": "how-does-it-work",
+      "blocks": {
+        "image_with_text_AUmVMA": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/select-location.png",
+            "icon-heading": "Select location",
+            "icon-text": "Choose the location where your food will be delivered."
+          }
+        },
+        "image_with_text_Wec7hT": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/choose-order.png",
+            "icon-heading": "Choose order",
+            "icon-text": "Check over hundreds of menus to pick your favorite food"
+          }
+        },
+        "image_with_text_DWUHDe": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/pay-advance.png",
+            "icon-heading": "Pay advanced",
+            "icon-text": "It's quick, safe, and simple. Select several methods of payment"
+          }
+        },
+        "image_with_text_LnLdQQ": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/enjoy-meals.png",
+            "icon-heading": "Enjoy meals",
+            "icon-text": "Food is made and delivered directly to your home."
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_AUmVMA",
+        "image_with_text_Wec7hT",
+        "image_with_text_DWUHDe",
+        "image_with_text_LnLdQQ"
+      ],
+      "settings": {
+        "heading": "How does it work"
+      }
+    },
+    "popular_items_CcCNFQ": {
+      "type": "popular-Items",
+      "blocks": {
+        "image_with_text_Y83d6z": {
+          "type": "image_with_text",
+          "settings": {
+            "popular-items_icon": "shopify://shop_images/cheese_burger.png",
+            "icon-text": "Cheese Burger",
+            "location": "Burger Arena",
+            "price": "3.88",
+            "order-now": "Order now"
+          }
+        },
+        "image_with_text_94bjxM": {
+          "type": "image_with_text",
+          "settings": {
+            "popular-items_icon": "shopify://shop_images/toffee.png",
+            "icon-text": "Toffe’s Cake",
+            "location": "Top Sticks",
+            "price": "4.00",
+            "order-now": "Order now"
+          }
+        },
+        "image_with_text_kEnyw9": {
+          "type": "image_with_text",
+          "settings": {
+            "popular-items_icon": "shopify://shop_images/Dancake.png",
+            "icon-text": "Dancake",
+            "location": "Cake World",
+            "price": "1.99",
+            "order-now": "Order now"
+          }
+        },
+        "image_with_text_EXYAAw": {
+          "type": "image_with_text",
+          "settings": {
+            "popular-items_icon": "shopify://shop_images/crispy_sandwitch.png",
+            "icon-text": "Crispy Sandwitch",
+            "location": "Fastfood Dine",
+            "price": "3.00",
+            "order-now": "Order now"
+          }
+        },
+        "image_with_text_AhPkmt": {
+          "type": "image_with_text",
+          "settings": {
+            "popular-items_icon": "shopify://shop_images/Thai_soup.png",
+            "icon-text": "Thai  Soup",
+            "location": "Foody man",
+            "price": "2.79",
+            "order-now": "Order now"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_Y83d6z",
+        "image_with_text_94bjxM",
+        "image_with_text_kEnyw9",
+        "image_with_text_EXYAAw",
+        "image_with_text_AhPkmt"
+      ],
+      "settings": {
+        "popular-items_text": "Popular items"
+      }
+    },
+    "featured_restaurants_DWQ7PB": {
+      "type": "featured-restaurants",
+      "blocks": {
+        "image_with_text_NcgNJk": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/food_world.png",
+            "restaurant-logo": "shopify://shop_images/food_world_icon_e0c3f74f-6dd5-4135-ac26-649b0fca5ca1.png",
+            "image-text": "Foodworld",
+            "star-rating": "46",
+            "discount-tag": "20% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open tomorrow"
+          }
+        },
+        "image_with_text_WwUCmA": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/pizzapino.png",
+            "restaurant-logo": "shopify://shop_images/pizzapino_icon_b8060d30-a7c9-422c-bf2f-4e5d403f0c7f.png",
+            "image-text": "Pizzahub",
+            "star-rating": "40",
+            "discount-tag": "15% off",
+            "delivery-type": "Fast",
+            "discount-time": "Opens Tomorrow"
+          }
+        },
+        "image_with_text_xDTHVD": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/donuts_hut.png",
+            "restaurant-logo": "shopify://shop_images/donuts_hut_icon_907606dd-46a6-48f4-a4c3-214e23e4b94b.png",
+            "image-text": "Donuts hut",
+            "star-rating": "20",
+            "discount-tag": "10% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open Now"
+          }
+        },
+        "image_with_text_WWdDzQ": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/donuts_hut2.png",
+            "restaurant-logo": "shopify://shop_images/donuts_hut_icon_2.png",
+            "image-text": "Donuts hut",
+            "star-rating": "50",
+            "discount-tag": "15% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open now"
+          }
+        },
+        "image_with_text_T47JCz": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/Ruby_tuesday.png",
+            "restaurant-logo": "shopify://shop_images/Ruby_tuesday_icon_08aecad3-7374-42a3-ad68-4d025f6ac82a.png",
+            "image-text": "Ruby Tuesday",
+            "star-rating": "26",
+            "discount-tag": "!0% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open now"
+          }
+        },
+        "image_with_text_PpmbXr": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/Kuakata_Fried_Chicken.png",
+            "restaurant-logo": "shopify://shop_images/Kuakata_Fried_Chicken_icon_a010c6c2-1580-4170-898e-003e7f144694.png",
+            "image-text": "Kuakata Fried Chicken",
+            "star-rating": "53",
+            "discount-tag": "25% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open now"
+          }
+        },
+        "image_with_text_Hmjxdf": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/Red_Square.png",
+            "restaurant-logo": "shopify://shop_images/Red_Square_icon_96346fa1-4db7-4dd6-aa17-a5b6017441ec.png",
+            "image-text": "Red Square",
+            "star-rating": "45",
+            "discount-tag": "10% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open now"
+          }
+        },
+        "image_with_text_Yff7Kc": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/Taco_Bell.png",
+            "restaurant-logo": "shopify://shop_images/Taco_Bell_icon_7196d301-87ba-446b-8583-8c8538322c47.png",
+            "image-text": "Taco Bell",
+            "star-rating": "35",
+            "discount-tag": "10% off",
+            "delivery-type": "Fast",
+            "discount-time": "Open now"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_NcgNJk",
+        "image_with_text_WwUCmA",
+        "image_with_text_xDTHVD",
+        "image_with_text_WWdDzQ",
+        "image_with_text_T47JCz",
+        "image_with_text_PpmbXr",
+        "image_with_text_Hmjxdf",
+        "image_with_text_Yff7Kc"
+      ],
+      "settings": {
+        "featured-restaurants-heading": "Featured Restaurants"
+      }
+    },
+    "search_by_food_Q97NdC": {
+      "type": "search-by-food",
+      "blocks": {
+        "image_with_text_nMBcY3": {
+          "type": "image_with_text",
+          "settings": {
+            "search-by-food_icon": "shopify://shop_images/pizza.png",
+            "icon-text": "Pizza"
+          }
+        },
+        "image_with_text_hyEQPk": {
+          "type": "image_with_text",
+          "settings": {
+            "search-by-food_icon": "shopify://shop_images/burger.png",
+            "icon-text": "Burger"
+          }
+        },
+        "image_with_text_fKx8c4": {
+          "type": "image_with_text",
+          "settings": {
+            "search-by-food_icon": "shopify://shop_images/noodles.png",
+            "icon-text": "Noodles"
+          }
+        },
+        "image_with_text_qG9DaL": {
+          "type": "image_with_text",
+          "settings": {
+            "search-by-food_icon": "shopify://shop_images/snadwitch.png",
+            "icon-text": "Sub-sandiwch"
+          }
+        },
+        "image_with_text_heP6Jn": {
+          "type": "image_with_text",
+          "settings": {
+            "search-by-food_icon": "shopify://shop_images/chowmein.png",
+            "icon-text": "Chowmein"
+          }
+        },
+        "image_with_text_NqV7YK": {
+          "type": "image_with_text",
+          "settings": {
+            "search-by-food_icon": "shopify://shop_images/steak.png",
+            "icon-text": "Steak"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_nMBcY3",
+        "image_with_text_hyEQPk",
+        "image_with_text_fKx8c4",
+        "image_with_text_qG9DaL",
+        "image_with_text_heP6Jn",
+        "image_with_text_NqV7YK"
+      ],
+      "settings": {
+        "search-by-food_text": "Search by Food"
+      }
+    },
+    "fw_features_hBdrht": {
+      "type": "fw-features",
+      "blocks": {
+        "image_with_text_VNketA": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/discount.png",
+            "icon-text": "Daily Discounts"
+          }
+        },
+        "image_with_text_q3RPHA": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/live_tracking.png",
+            "icon-text": "Live Tracing"
+          }
+        },
+        "image_with_text_UkzGF4": {
+          "type": "image_with_text",
+          "settings": {
+            "block-image": "shopify://shop_images/quick_delivery.png",
+            "icon-text": "Quick Delivery"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_VNketA",
+        "image_with_text_q3RPHA",
+        "image_with_text_UkzGF4"
+      ],
+      "settings": {}
+    },
+    "app_section_9RCBKQ": {
+      "type": "app-section",
+      "blocks": {
+        "button_link_tEVJ8t": {
+          "type": "button_link",
+          "settings": {
+            "button-image": "shopify://shop_images/Google_Play_logo.png",
+            "button-link": "",
+            "button-alt": "GET IT ON",
+            "button-hd": "Google play"
+          }
+        },
+        "button_link_Jjkgyx": {
+          "type": "button_link",
+          "settings": {
+            "button-image": "shopify://shop_images/Apple_logo.png",
+            "button-link": "",
+            "button-alt": "Download on the",
+            "button-hd": "App store"
+          }
+        }
+      },
+      "block_order": [
+        "button_link_tEVJ8t",
+        "button_link_Jjkgyx"
+      ],
+      "settings": {
+        "app-section--heading": "Install the app",
+        "app-section--details": "It's never been easier to order food. Look for the finest discounts and you'll be lost in a world of delectable food."
+      }
+    },
+    "best_deals_dz3gmh": {
+      "type": "best-deals",
+      "settings": {
+        "best-deals-heading": "<p>Best deals <strong>Crispy Sandwiches</strong></p>",
+        "best-deals-text": "Enjoy the large size of sandwiches. Complete perfect slice of sandwiches.",
+        "button-text": "Proceed to Order >",
+        "best-deals-image": "shopify://shop_images/best-deal.png"
+      }
+    },
+    "celebrate_parties_dhVGXQ": {
+      "type": "celebrate-parties",
+      "settings": {
+        "celebrate-parties-heading": "<p>Celebrate parties with <strong>Fried Chicken</strong></p>",
+        "celebrate-parties-text": "Get the best fried chicken smeared with a lip smacking lemon chili flavor. Check out best deals for fried chicken.",
+        "button-text": "Proceed to Order >",
+        "celebrate-parties-image": "shopify://shop_images/Right.png"
+      }
+    },
+    "hot_pizza_HrYrfV": {
+      "type": "hot-pizza",
+      "settings": {
+        "hot-pizza-heading": "<p>Wanna eat hot & spicy <strong>Pizza?</strong></p>",
+        "hot-pizza-text": "Pair up with a friend and enjoy the hot and crispy pizza pops. Try it with the best deals.",
+        "button-text": "Proceed to Order >",
+        "hot-pizza-image": "shopify://shop_images/hot-pizza.png"
+      }
+    },
+    "are_you_ready_GBLe4f": {
+      "type": "are-you-ready",
+      "settings": {
+        "heading": "Are you ready to order with the best deals?",
+        "button-text": "Proceed to Order >"
+      }
+    },
+    "swiper_demo_eXtVLp": {
+      "type": "swiper-demo",
+      "settings": {}
+    }
+  },
+  "order": [
+    "are_you_starving_WYyqbP",
+    "discount_Xbhtjp",
+    "how_does_it_work_AKyCmf",
+    "popular_items_CcCNFQ",
+    "featured_restaurants_DWQ7PB",
+    "search_by_food_Q97NdC",
+    "fw_features_hBdrht",
+    "app_section_9RCBKQ",
+    "best_deals_dz3gmh",
+    "celebrate_parties_dhVGXQ",
+    "hot_pizza_HrYrfV",
+    "are_you_ready_GBLe4f",
+    "swiper_demo_eXtVLp"
+  ]
+}
