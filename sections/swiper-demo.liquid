@@ -1,9 +1,20 @@
+
 <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <style>
+  #shopify-section-{{ section.id }} {
+    position: relative !important;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-button-prev,
+  #shopify-section-{{ section.id }} .swiper-button-next {
+    display: block !important;
+  }
+</style>
 
 <div class="swiperSlider">
   <!-- Additional required wrapper -->
